@@ -36,4 +36,4 @@ $(document).ready(function(){   // upon running the HTML file, the function is c
 		$('#desc').html(desc);  
 	}
 	
-});
+})
