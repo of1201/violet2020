@@ -27,7 +27,7 @@ $(document).ready(function(){   // upon running the HTML file, the function is c
 	function updateDOM(data){
 		var city = data.name; //assign the city name to the variable city
 		var icon = data.weather[0].icon;
-		var temp = math.round(data.main.temp);
+		var temp = Math.round(data.main.temp);
 		var desc = data.weather[0].description;
 		
 		$('#city').html(city);
