@@ -6,16 +6,16 @@ $(document).ready(function(){   // upon running the HTML file, the function is c
 	// By calling this your current coordinates are automatically assigned to the variable called pos
 	function success(pos){
 		var lat = pos.coords.latitude;
-		var long = pos.coords.longitude;	
-		weather(lat, long); // This gets the data of ur current location from API and display them in the console
+		var lon = pos.coords.longitude;	
+		weather(lat, lon); // This gets the data of ur current location from API and display them in the console
 	}
 	
 	function error(){
 		console.log('error');
 	}
 	
-	function weather(lat, long){
-	    var URL = `https://fcc-weather-api.glitch.me/api/current?lat=${lat}&lon=${long}`; //API address
+	function weather(lat, lon){
+	    var URL = `https://fcc-weather-api.glitch.me/api/current?lat="+lat+"&lon="+lon; //API address
 	
 	    $.getJSON(URL, function(data){
 		//updateDOM(data);
