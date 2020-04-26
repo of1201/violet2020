@@ -18,22 +18,22 @@ $(document).ready(function(){   // upon running the HTML file, the function is c
 	    var URL = `https://fcc-weather-api.glitch.me/api/current?lat="+lat+"&lon="+lon; //API address
 	
 	    $.getJSON(URL, function(data){
-		//updateDOM(data);
-		console.log(data);    //after entering into the URL, we assign all the data to the variable data variable. And use console.log to run all the data in the browser
+		updateDOM(data);
+		//console.log(data);    //after entering into the URL, we assign all the data to the variable data variable. And use console.log to run all the data in the browser
 	    });
 	}  //function end does not need a semicolon
 
 	
-//	function updateDOM(data){
-//		var city = data.name; //assign the city name to the variable city
-//		var icon = data.weather[0].icon;
-//		var temp = Math.round(data.main.temp);
-//		var desc = data.weather[0].description;
+	function updateDOM(data){
+		var city = data.name; //assign the city name to the variable city
+		var icon = data.weather[0].icon;
+		var temp = Math.round(data.main.temp);
+		var desc = data.weather[0].description;
 		
-//		$('#city').html(city);
-//		$('#icon').attr('src', icon);  //need to change the attribute"src" within the img tab
-//		$('#temp').html(temp);
-//		$('#desc').html(desc);  
-///	}
+		$('#city').html(city);
+		$('#icon').attr('src', icon);  //need to change the attribute"src" within the img tab
+		$('#temp').html(temp);
+		$('#desc').html(desc);  
+	}
 	
 });
