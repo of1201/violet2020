@@ -21,7 +21,7 @@ $(document).ready(function(){   // upon running the HTML file, the function is c
 		//updateDOM(data);
 		console.log(data);    //after entering into the URL, we assign all the data to the variable data variable. And use console.log to run all the data in the browser
 	    });
-	}  //function end does not need a semicolon
+	};  //function end does not need a semicolon
 	
 	function updateDOM(data){
 		var city = data.name; //assign the city name to the variable city
@@ -33,7 +33,7 @@ $(document).ready(function(){   // upon running the HTML file, the function is c
 		$('#icon').attr('src', icon);  //need to change the attribute"src" within the img tab
 		$('#temp').html(temp);
 		$('#desc').html(desc);  
-	}
+	};
 
 	
 });
