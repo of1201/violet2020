@@ -1,13 +1,39 @@
-//$ is like a java symbol
+//$ is like a jQuery sign to select things
 $(document).ready(function(){   // upon running the HTML file, the function is called
 
-	function weather(){
-	    var URL = 'https://fcc-weather-api.glitch.me/api/current?lat=53.70&lon=-1.24'; //API address
+	// Get location using geolocation
+	navigator.geolocation.getCurrentPosition(success, error); //Geolocation is the location coordinates of your current device
+	// By calling this your current coordinates are automatically assigned to the variable called pos
+	function success(pos){
+		var lat = pos.coords.latitude;
+		var long = pos.coords.longitude;	
+		weather(lat, long); // This gets the data of ur current location from API and display them in the console
+	}
+	
+	function error(){
+		console.log('error');
+	}
+	
+	function weather(lat, long){
+	    var URL = 'https://fcc-weather-api.glitch.me/api/current?lat=${lat}&lon=${long}'; //API address
 	
 	    $.getJSON(URL, function(data){
-		console.log(data);    //after entering into the URL, we assign all the data into the data variable. And use console.log to run all the data in the browser
+		updateDOM(data);
+		//console.log(data);    //after entering into the URL, we assign all the data to the variable data variable. And use console.log to run all the data in the browser
 	    });
 	}  //function end does not need a semicolon
 
-	weather();
+	
+	function updateDOM(data){
+		var city = data.name; //assign the city name to the variable city
+		var icon = data.weather[0].icon;
+		var temp = math.round(data.main.temp);
+		var desc = data.weather[0].description;
+		
+		$('#city').html(city);
+		$('#icon').attr('src', icon);  //need to change the attribute"src" within the img tab
+		$('#temp').html(temp);
+		$('#desc').html(desc);  
+	}
+	
 });
