@@ -15,7 +15,7 @@ $(document).ready(function(){   // upon running the HTML file, the function is c
 	}
 	
 	function weather(lat, long){
-	    var URL = 'https://fcc-weather-api.glitch.me/api/current?lat=${lat}&lon=${long}'; //API address
+	    var URL = `https://fcc-weather-api.glitch.me/api/current?lat=${lat}&lon=${long}`; //API address
 	
 	    $.getJSON(URL, function(data){
 		//updateDOM(data);
