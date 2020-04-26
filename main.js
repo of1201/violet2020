@@ -33,7 +33,7 @@ $(document).ready(function(){   // upon running the HTML file, the function is c
 		$('#icon').attr('src', icon);  //need to change the attribute"src" within the img tab
 		$('#temp').html(temp);
 		$('#desc').html(desc);  
-	};
+	}
 
 	
 });
