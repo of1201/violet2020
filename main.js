@@ -19,7 +19,7 @@ $(document).ready(function(){   // upon running the HTML file, the function is c
 	
 	    $.getJSON(URL, function(data){
 		updateDOM(data);
-		//console.log(data);    //after entering into the URL, we assign all the data to the variable data variable. And use console.log to run all the data in the browser
+		console.log(data);    //after entering into the URL, we assign all the data to the variable data variable. And use console.log to run all the data in the browser
 	    });
 	}  //function end does not need a semicolon
 
