@@ -1,0 +1,57 @@
+h1{
+	font-size: 16rem; /* 16 times of the default size (16px) */
+	padding: 0px;
+	margin-top: 0px;
+}
+
+h2{
+	font-size: 3rem;
+	text-align: center;
+}
+
+h3{
+	font-size: 1.4rem;
+}
+
+span{
+	font-size: 6rem;
+}
+
+#icon{
+	margin-top: 50px;
+}
+
+.degrees{
+	margin-top: 10px;
+}
+
+.middle{
+	text-align: center;
+	margin-bottom: 100px;
+}
+
+
+.container{
+	max-width:500px; /*maximum width is 550, if within it, normal font. If larger, then shrink the font automatically */
+	height:100vh; /* 100% of the view I want */
+	text-align: center;
+	justify-content: center;
+	border: 0 solid #000;
+	border-right: 1px solid #000;
+	border-left: 1px solid #000;
+	margin: auto;
+	display: grid;
+	grid-template-rows: 20%; /* Treat each element in the "container" as a row and set the spacing of each element */
+	padding: 25px 5px; /* similar to margin */
+}
+
+h3{
+	margin-top: -200px;
+}
+
+.degrees{
+	display:grid;
+	grid-template-columns: auto auto;
+	justify-content: center; /* put all elements to the center */
+	margin-left: 2rem;
+}
